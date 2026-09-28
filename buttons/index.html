@@ -156,6 +156,11 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
 .opts figcaption{font-size:var(--caption);color:var(--ink-soft);line-height:1.4}
 .opts figcaption strong{display:block;font-size:var(--body)}
 
+.img-ph.slim{min-height:22vh;margin-top:1.6rem}
+.areas.defs .area{grid-template-columns:minmax(140px,200px) 1.4fr 1fr}
+.areas.defs .area.head .desc{font-size:var(--caption);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute)}
+.cite a{color:inherit}
+@media(max-width:820px){.areas.defs .area{grid-template-columns:1fr}}
 /* ---- chrome ---- */
 #progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--sanbeam),var(--pink),var(--indigo-bright));z-index:50;transition:width .5s var(--ease)}
 #counter{position:fixed;bottom:22px;right:26px;font-size:var(--caption);color:var(--ink-mute);font-weight:600;letter-spacing:.1em;z-index:50}
@@ -189,9 +194,14 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
     <div class="blob b1"></div>
     <div class="wrap">
       <div class="eyebrow"><span class="chapter">In one slide</span></div>
-      <h2 class="title">Primary and secondary stay. Tertiary becomes a <span class="grad">neutral outline</span>.</h2>
-      <img class="shot spec" src="assets/spec-outline-tertiary.png" alt="Old vs new production buttons: primary and secondary unchanged, tertiary becomes a neutral outline, new outlined destructive button" />
-      <p class="kicker">A destructive button (ADS-118) joins the set, using the same outline anatomy in red.</p>
+      <h2 class="title">What's changing in the <span class="grad">button set</span>.</h2>
+      <div class="areas">
+        <div class="area"><div class="name">Primary</div><div class="desc">Stays the same.</div></div>
+        <div class="area"><div class="name">Secondary</div><div class="desc">Stays the same.</div></div>
+        <div class="area"><div class="name">Tertiary</div><div class="desc"><strong>Changes.</strong></div></div>
+        <div class="area"><div class="name">Destructive</div><div class="desc"><strong>New.</strong></div></div>
+      </div>
+      <div class="img-ph slim">Button set visual<small>visual to come</small></div>
     </div>
   </section>
 
@@ -209,78 +219,56 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
     </div>
   </section>
 
-  <!-- 01 — WHY -->
-  <section class="slide">
-    <div class="blob b2"></div>
-    <div class="wrap">
-      <div class="eyebrow"><span class="num">01</span> 31 July · Why rework it</div>
-      <div class="split">
-        <div>
-          <h3>The current tertiary doesn't hold up.</h3>
-          <ul class="clean">
-            <li>Orange label on light orange: about <strong>3.4:1</strong> contrast. An accessibility risk at small size.</li>
-            <li>In dark mode, hover looks identical to default: <strong>no feedback</strong>.</li>
-            <li>It brings a <strong>brand colour</strong> into what should be the quietest action.</li>
-          </ul>
-          <p class="kicker">The team asked to explore a <strong>neutral</strong> CTA instead.</p>
-        </div>
-        <img class="shot" src="assets/opt-a-current-tertiary.png" alt="Current production tertiary button, all states" />
-      </div>
-    </div>
-  </section>
-
-  <!-- 02 — OPTIONS CONSIDERED -->
+  <!-- 01 — OPTIONS CONSIDERED -->
   <section class="slide">
     <div class="blob b3"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="num">02</span> August · Options considered</div>
-      <h3>Three neutral directions, built only from existing tokens.</h3>
-      <div class="cols c3 opts">
-        <figure class="card"><img src="assets/opt-b-neutral-solid.png" alt="Option 1, neutral solid"><figcaption><strong>Neutral solid</strong> Black that inverts with the theme.</figcaption></figure>
-        <figure class="card"><img src="assets/opt-c-neutral-outline.png" alt="Option 2, neutral outline"><figcaption><strong>Neutral outline</strong> Uses the Outline tokens that already exist.</figcaption></figure>
-        <figure class="card"><img src="assets/opt-d-fixed-black-white.png" alt="Option 3, fixed black and white"><figcaption><strong>Fixed black / white</strong> Locked colours, for buttons on photos.</figcaption></figure>
-      </div>
+      <div class="eyebrow"><span class="num">01</span> August · Options considered</div>
+      <h3>The directions the team explored.</h3>
+      <div class="img-ph" style="margin-top:1.6rem">Options considered<small>visuals to come</small></div>
     </div>
   </section>
 
-  <!-- 02b — VOTE -->
+  <!-- 01b — VOTE -->
   <section class="slide">
     <div class="blob b1"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="num">02</span> 21 August · DS Office Hours</div>
+      <div class="eyebrow"><span class="num">01</span> 21 August · DS Office Hours</div>
       <h2 class="title">The team voted <span class="grad">unanimously</span> to add a black neutral.</h2>
       <p class="lead">Black was seen as the most flexible option.</p>
     </div>
   </section>
 
-  <!-- 03 — PRINCIPLES -->
+  <!-- 02 — PRINCIPLES -->
   <section class="slide">
     <div class="wrap">
-      <div class="eyebrow"><span class="num">03</span> 26 August · What we agreed</div>
+      <div class="eyebrow"><span class="num">02</span> 26 August · What we agreed</div>
       <h3>Hierarchy is about <strong>function first</strong>, colour second.</h3>
-      <div class="areas">
-        <div class="area"><div class="name">Primary</div><div class="desc">The happy path. One per view.</div></div>
-        <div class="area"><div class="name">Secondary</div><div class="desc">Alternatives that don't guide the user.</div></div>
-        <div class="area"><div class="name">Tertiary</div><div class="desc">Even less prominent.</div></div>
+      <div class="areas defs">
+        <div class="area head"><div></div><div class="desc">Nielsen Norman Group</div><div class="desc">For us</div></div>
+        <div class="area"><div class="name">Primary</div><div class="desc">Most visual emphasis, usually solid and filled. For important or common actions: save, check out.</div><div class="desc">The happy path. One per view.</div></div>
+        <div class="area"><div class="name">Secondary</div><div class="desc">Medium emphasis, usually an outline. For less important actions: cancel, reply.</div><div class="desc">Alternatives that don't guide the user.</div></div>
+        <div class="area"><div class="name">Tertiary</div><div class="desc">Minimal emphasis. For optional or supplementary actions: view more.</div><div class="desc">Even less prominent.</div></div>
       </div>
+      <p class="cite">Source: Nielsen Norman Group, <a href="https://www.nngroup.com/articles/button-states-communicate-interaction/" target="_blank" rel="noopener">Button States: Communicate Interaction</a></p>
       <p class="kicker"><strong>Open points:</strong> black draws a lot of attention, so it's an exception (e.g. a standalone action), not a default. Next step: map real screens with competing buttons before deciding.</p>
     </div>
   </section>
 
-  <!-- 04 — BLACK AS SECONDARY -->
+  <!-- 03 — BLACK AS SECONDARY -->
   <section class="slide">
     <div class="wrap wide">
-      <div class="eyebrow"><span class="num">04</span> September · First mapping: black as secondary</div>
+      <div class="eyebrow"><span class="num">03</span> September · First mapping: black as secondary</div>
       <img class="shot spec" src="assets/spec-black-secondary.png" alt="Black as secondary, light purple moves to tertiary" />
       <img class="shot screens" src="assets/screens-black-secondary.png" alt="App screens with black secondary buttons" />
     </div>
   </section>
 
-  <!-- 05 — CONSTRAINT 1 -->
+  <!-- 04 — CONSTRAINT 1 -->
   <section class="slide">
     <div class="blob b2"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="num">05</span> 24 September · Constraints we found</div>
+      <div class="eyebrow"><span class="num">04</span> 24 September · Constraints we found</div>
       <h3>A large black secondary doesn't work.</h3>
       <ul class="clean">
         <li>Too many <strong>large black buttons</strong> across the app.</li>
@@ -291,20 +279,20 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
     </div>
   </section>
 
-  <!-- 06 — BLACK AS TERTIARY -->
+  <!-- 05 — BLACK AS TERTIARY -->
   <section class="slide">
     <div class="wrap wide">
-      <div class="eyebrow"><span class="num">06</span> Second mapping: black as tertiary</div>
+      <div class="eyebrow"><span class="num">05</span> Second mapping: black as tertiary</div>
       <img class="shot spec" src="assets/spec-black-tertiary.png" alt="Black as tertiary, secondary stays light purple" />
       <img class="shot screens" src="assets/screens-black-tertiary.png" alt="App screens with black tertiary buttons" />
     </div>
   </section>
 
-  <!-- 07 — CONSTRAINT 2 -->
+  <!-- 06 — CONSTRAINT 2 -->
   <section class="slide">
     <div class="blob b3"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="num">07</span> Constraints we found</div>
+      <div class="eyebrow"><span class="num">06</span> Constraints we found</div>
       <h3>Black as tertiary turns the hierarchy upside down.</h3>
       <div class="cols c2" style="margin-top:1.6rem">
         <div class="card"><h4>Visual weight</h4><p>Black carries far more weight than the light purple secondary, so the "least prominent" button would stand out the most.</p></div>
@@ -313,12 +301,13 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
     </div>
   </section>
 
-  <!-- 08 — THE PROPOSAL -->
+  <!-- 07 — THE PROPOSAL -->
   <section class="slide">
     <div class="blob b1"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="num">08</span> Where we're going</div>
+      <div class="eyebrow"><span class="num">07</span> Where we're going</div>
       <h2 class="title">A <span class="grad">neutral outline</span> tertiary.</h2>
+      <p class="lead" style="max-width:56ch">Across several benchmarks, a strong primary, a secondary and an outline tertiary is <strong>the most common set-up</strong>. It's the most standard option, and the one that reinvents the wheel the least.</p>
       <div class="cols c3" style="margin-top:2rem">
         <div class="card"><h4>Keeps the order</h4><p>Lighter than the secondary, so primary → secondary → tertiary reads correctly.</p></div>
         <div class="card"><h4>Neutral</h4><p>No brand colour on the quietest action. Black stays available as an exception.</p></div>
@@ -327,39 +316,25 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
     </div>
   </section>
 
-  <!-- 09 — ON REAL SCREENS (visuals TBD) -->
+  <!-- 08 — ON REAL SCREENS (visuals TBD) -->
   <section class="slide">
     <div class="wrap wide">
-      <div class="eyebrow"><span class="num">09</span> On real screens</div>
+      <div class="eyebrow"><span class="num">08</span> On real screens</div>
       <div class="img-ph">Outline tertiary on real screens<small>visuals to come · from BUTTON MAPPING v2</small></div>
     </div>
   </section>
 
-  <!-- 10 — BEFORE IT SHIPS -->
-  <section class="slide">
-    <div class="wrap">
-      <div class="eyebrow"><span class="num">10</span> Before it ships</div>
-      <h3>What still needs fixing.</h3>
-      <div class="areas">
-        <div class="area"><div class="name">Dark mode</div><div class="desc">The Outline background points to the wrong token: near-white label on a near-white button.</div></div>
-        <div class="area"><div class="name">Token aliases</div><div class="desc">Outline tokens point to raw colours instead of semantic ones, and the default border doesn't change with the mode.</div></div>
-        <div class="area"><div class="name">States</div><div class="desc">No focus or disabled tokens in the Outline group yet.</div></div>
-        <div class="area"><div class="name">Lens rules</div><div class="desc">The Button rules only allow Primary, Secondary and Tertiary backgrounds, so they need updating.</div></div>
-        <div class="area"><div class="name">Contrast</div><div class="desc">Final contrast check by Sofia.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11 — NEXT STEPS -->
+  <!-- 09 — NEXT STEPS -->
   <section class="slide">
     <div class="blob b2"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="num">11</span> Next steps</div>
+      <div class="eyebrow"><span class="num">09</span> Next steps</div>
       <ul class="clean">
         <li>Validate the outline tertiary together</li>
-        <li>Fix the Outline tokens and build the variants in the library</li>
+        <li>Build the variants in the library</li>
         <li>Share with the devs</li>
       </ul>
+      <p class="kicker"><strong>Development timeline: unknown for now.</strong> We don't yet know who the new dev referents for the design system are, so we can't say when this will be built.</p>
     </div>
   </section>
 
