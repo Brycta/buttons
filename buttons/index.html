@@ -151,6 +151,7 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
 .shot.screens{max-height:52vh;margin-top:1.2rem}
 .split{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,4vw,64px);align-items:center}
 .split .shot{max-height:62vh}
+.split .shot.tall{max-height:74vh;justify-self:center}
 @media(max-width:820px){.split{grid-template-columns:1fr}}
 .opts{margin-top:1.6rem}
 .opts figure{margin:0;display:flex;flex-direction:column;gap:.8rem}
@@ -233,8 +234,17 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
     <div class="blob b3"></div>
     <div class="wrap">
       <div class="eyebrow"><span class="num">01</span> August · Options considered</div>
-      <h3>The directions the team explored.</h3>
-      <div class="img-ph" style="margin-top:1.6rem">Options considered<small>visuals to come</small></div>
+      <div class="split">
+        <div>
+          <h3>The directions the team explored.</h3>
+          <ul class="clean">
+            <li>Each designer explored their own proposals on <strong>real app screens</strong>.</li>
+            <li>Buttons were tested on the <strong>new background colours</strong> too.</li>
+            <li>Reviewed together in <strong>DS Office Hours</strong> on 14 and 21 August.</li>
+          </ul>
+        </div>
+        <img class="shot tall" src="assets/options-explorations.png" alt="Figma canvas of the team's button explorations: BK, juju, Vince and others, on several background colours" />
+      </div>
     </div>
   </section>
 
