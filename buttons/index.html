@@ -135,11 +135,11 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
 
 /* timeline (5 steps) */
 .timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2rem}
-.timeline .step{border-top:3px solid var(--line);padding-top:1rem}
+.timeline .step{border-top:3px solid var(--line);padding-top:1rem;display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:0;align-content:start}
 .timeline .step.on{border-color:var(--sanbeam)}
 .timeline .step.pending{visibility:hidden}
 .timeline .step .when{font-size:var(--caption);color:var(--ink-mute);font-weight:700;letter-spacing:.08em}
-.timeline .step .what{font-weight:700;margin:.3rem 0 .4rem;font-size:var(--body-lg)}
+.timeline .step .what{font-weight:700;margin:.3rem 0 .4rem;font-size:var(--body-lg);align-self:start}
 .timeline .step .det{font-size:var(--caption);color:var(--ink-soft);line-height:1.4}
 @media(max-width:820px){.timeline{grid-template-columns:1fr 1fr}}
 
