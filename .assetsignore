@@ -1,0 +1,11 @@
+# Files excluded from the Cloudflare Workers static-asset upload.
+.git
+.gitignore
+.assetsignore
+.claude
+node_modules
+wrangler.jsonc
+*.md
+*.mov
+*.gif
+.DS_Store

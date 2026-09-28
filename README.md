@@ -1,8 +1,9 @@
-# Présentations
+# Presentations
 
-Site statique, un dossier par présentation, déployé automatiquement sur Cloudflare Pages à chaque `git push`.
+Static site, one folder per deck, deployed to Cloudflare (Workers static assets, see `wrangler.jsonc`) on every `git push`.
 
-- `/` — landing page qui liste les présentations
-- `/buttons/` — présentation Buttons
+- `/` — landing page listing the decks
+- `/buttons/` — The Buttons
 
-Navigation dans une prez : ← → / espace / clic. `#3` dans l'URL ouvre directement la slide 3.
+In a deck: ← → / space / click the edges. Add `class="skip"` to a slide to hide it without deleting it.
+Preview locally: `python3 -m http.server 4321`
