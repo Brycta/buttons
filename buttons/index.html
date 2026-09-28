@@ -182,6 +182,17 @@ ul.pc li::before{position:absolute;left:0;top:0;font-weight:800}
 ul.pc li.pro::before{content:"✓";color:#388E3C}
 ul.pc li.con::before{content:"✕";color:var(--pink)}
 @media(max-width:1000px){.outline-opts{grid-template-columns:1fr 1fr}}
+.ladders{margin-top:1.2rem;gap:clamp(16px,2vw,32px)}
+.card.ladder{display:flex;flex-direction:column;gap:.9rem}
+.card.ladder .tag{align-self:flex-start}
+.ladder-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.ladder-row .btn-demo{margin:0;height:40px;font-size:14px;padding:0 18px}
+.btn-demo.p{background:#4801A0;border-color:#4801A0;color:#fff}
+.btn-demo.s{background:#E9D6FF;border-color:#E9D6FF;color:#4801A0}
+.phones{display:flex;gap:12px;justify-content:center}
+.phones img{height:38vh;width:auto;border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 30px -22px rgba(38,32,28,.35);background:#fff}
+.phones.solo img{height:70vh}
+.card.ladder ul.pc{margin-top:.2rem}
 /* ---- chrome ---- */
 #progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--sanbeam),var(--pink),var(--indigo-bright));z-index:50;transition:width .5s var(--ease)}
 #counter{position:fixed;bottom:22px;right:26px;font-size:var(--caption);color:var(--ink-mute);font-weight:600;letter-spacing:.1em;z-index:50}
@@ -429,19 +440,75 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
     </div>
   </section>
 
-  <!-- 10 — ON REAL SCREENS (visuals TBD) -->
+  <!-- 10 — TWO OPTIONS -->
   <section class="slide">
     <div class="wrap wide">
-      <div class="eyebrow"><span class="num">10</span> On real screens</div>
+      <div class="eyebrow"><span class="num">10</span> Two options</div>
+      <h3>Two ladders to decide between.</h3>
+      <div class="cols c2 ladders">
+        <div class="card ladder">
+          <span class="tag">Option A · the typical ladder</span>
+          <div class="ladder-row">
+            <span class="btn-demo p">Primary</span>
+            <span class="btn-demo" style="border-color:#BC85FE;color:#4801A0">Secondary</span>
+            <span class="btn-demo s">Tertiary</span>
+          </div>
+          <div class="phones"><img src="assets/optA-selection.png" alt="Photo selection screen, option A"><img src="assets/optA-memorial.png" alt="Memorial card screen, option A"></div>
+          <ul class="pc">
+            <li class="pro">Outline secondary is the norm: 13/17 benchmarked systems</li>
+            <li class="con">The soft fill tertiary looks heavier than the outline secondary</li>
+          </ul>
+        </div>
+        <div class="card ladder">
+          <span class="tag solid">Option B · closest to what we agreed</span>
+          <div class="ladder-row">
+            <span class="btn-demo p">Primary</span>
+            <span class="btn-demo s">Secondary</span>
+            <span class="btn-demo" style="border-color:#BC85FE;color:#4801A0">Tertiary</span>
+          </div>
+          <div class="phones"><img src="assets/optB-selection.png" alt="Photo selection screen, option B"><img src="assets/optB-memorial.png" alt="Memorial card screen, option B"></div>
+          <ul class="pc">
+            <li class="pro">Keeps today's secondary: only the tertiary changes</li>
+            <li class="pro">Each tier is lighter than the one above it</li>
+            <li class="con">An outline tertiary is rare (1/17 benchmarked systems)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10b — TEXT-ONLY REFERENCE -->
+  <section class="slide">
+    <div class="wrap wide">
+      <div class="split">
+        <div>
+          <div class="eyebrow"><span class="num">10</span> For reference</div>
+          <h3>What a text-only tertiary looks like.</h3>
+          <div class="ladder-row" style="margin-top:1.6rem">
+            <span class="btn-demo p">Primary</span>
+            <span class="btn-demo" style="border-color:#BC85FE;color:#4801A0">Secondary</span>
+            <span class="btn-demo" style="border-color:transparent;background:transparent;color:#4801A0;padding:0 8px">Tertiary</span>
+          </div>
+          <p class="lead">The most common tertiary in the benchmark (13/17). Shown for comparison, not proposed.</p>
+        </div>
+        <div class="phones solo"><img src="assets/text-selection.png" alt="Photo selection screen with text-only tertiary"><img src="assets/text-memorial.png" alt="Memorial card screen with text-only tertiary"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 — ON REAL SCREENS (visuals TBD) -->
+  <section class="slide">
+    <div class="wrap wide">
+      <div class="eyebrow"><span class="num">11</span> On real screens</div>
       <div class="img-ph">Outline tertiary on real screens<small>visuals to come · from BUTTON MAPPING v2</small></div>
     </div>
   </section>
 
-  <!-- 11 — CHALLENGES TO THE OUTLINE -->
+  <!-- 12 — CHALLENGES TO THE OUTLINE -->
   <section class="slide">
     <div class="blob b3"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="num">11</span> Challenges to the outline</div>
+      <div class="eyebrow"><span class="num">12</span> Challenges to the outline</div>
       <div class="cols c2" style="margin-top:1rem;align-items:start">
         <div>
           <h3>What we've heard</h3>
@@ -461,11 +528,11 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
     </div>
   </section>
 
-  <!-- 12 — NEXT STEPS -->
+  <!-- 13 — NEXT STEPS -->
   <section class="slide">
     <div class="blob b2"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="num">12</span> Next steps</div>
+      <div class="eyebrow"><span class="num">13</span> Next steps</div>
       <ul class="clean">
         <li>Validate the outline tertiary together</li>
         <li>Build the variants in the library</li>
