@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buttons</title>
+<style>
+  :root { --bg: #0f1115; --fg: #f4f4f5; --muted: #9ca3af; --accent: #7c9cff; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, sans-serif; }
+
+  .slide {
+    position: fixed; inset: 0; display: flex; flex-direction: column; justify-content: center;
+    padding: 8vh 10vw; opacity: 0; pointer-events: none;
+    transform: scale(.85); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1);
+  }
+  .slide.active { opacity: 1; transform: scale(1); pointer-events: auto; }
+  .slide.past { transform: scale(1.25); }
+
+  h1 { font-size: clamp(40px, 7vw, 96px); line-height: 1.05; letter-spacing: -.02em; }
+  h2 { font-size: clamp(28px, 4.5vw, 60px); line-height: 1.1; margin-bottom: 4vh; }
+  p, li { font-size: clamp(18px, 2vw, 28px); line-height: 1.5; color: var(--muted); }
+  ul { padding-left: 1.2em; display: grid; gap: 1.2vh; }
+  .kicker { color: var(--accent); font-size: clamp(14px, 1.4vw, 18px); text-transform: uppercase; letter-spacing: .12em; margin-bottom: 2vh; }
+
+  .progress { position: fixed; left: 0; bottom: 0; height: 3px; background: var(--accent); transition: width .6s ease; }
+  .counter { position: fixed; right: 24px; bottom: 16px; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+
+<section class="slide">
+  <p class="kicker">Présentation</p>
+  <h1>Buttons</h1>
+</section>
+
+<section class="slide">
+  <h2>Titre de la slide</h2>
+  <ul>
+    <li>Premier point</li>
+    <li>Deuxième point</li>
+    <li>Troisième point</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>Merci</h1>
+</section>
+
+<div class="progress"></div>
+<div class="counter"></div>
+
+<script>
+  // Navigation: ← → / espace / clic, et #n dans l'URL pour ouvrir une slide précise.
+  const slides = [...document.querySelectorAll('.slide')];
+  const progress = document.querySelector('.progress');
+  const counter = document.querySelector('.counter');
+  let current = Math.min(Math.max(parseInt(location.hash.slice(1)) - 1 || 0, 0), slides.length - 1);
+
+  function show(i) {
+    current = Math.min(Math.max(i, 0), slides.length - 1);
+    slides.forEach((s, n) => {
+      s.classList.toggle('active', n === current);
+      s.classList.toggle('past', n < current);
+    });
+    progress.style.width = ((current + 1) / slides.length * 100) + '%';
+    counter.textContent = (current + 1) + ' / ' + slides.length;
+    history.replaceState(null, '', '#' + (current + 1));
+  }
+
+  document.addEventListener('keydown', e => {
+    if (['ArrowRight', 'ArrowDown', ' ', 'PageDown'].includes(e.key)) { e.preventDefault(); show(current + 1); }
+    if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); show(current - 1); }
+    if (e.key === 'Home') show(0);
+    if (e.key === 'End') show(slides.length - 1);
+  });
+  document.addEventListener('click', e => show(current + (e.clientX < innerWidth / 3 ? -1 : 1)));
+
+  show(current);
+</script>
+</body>
+</html>
