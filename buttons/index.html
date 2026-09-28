@@ -203,6 +203,10 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
 .ladder-lg .lad{display:flex;flex-direction:column;align-items:center;gap:.5rem}
 .ladder-lg .btn-demo{height:56px;font-size:18px;padding:0 32px}
 .ladder-lg small{font-size:var(--caption);color:var(--ink-mute);font-weight:600;letter-spacing:.04em}
+.split.notext{grid-template-columns:1fr 1fr}
+.phones.compare figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:.6rem}
+.phones.compare img{height:64vh}
+.phones.compare figcaption{font-size:var(--caption);font-weight:700;color:var(--ink-soft);letter-spacing:.04em;text-transform:uppercase}
 /* ---- chrome ---- */
 #progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--sanbeam),var(--pink),var(--indigo-bright));z-index:50;transition:width .5s var(--ease)}
 #counter{position:fixed;bottom:22px;right:26px;font-size:var(--caption);color:var(--ink-mute);font-weight:600;letter-spacing:.1em;z-index:50}
@@ -316,7 +320,11 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
   <section class="slide">
     <div class="wrap wide">
       <div class="eyebrow"><span class="num">03</span> September · First mapping: black as secondary</div>
-      <img class="shot spec" src="assets/spec-black-secondary.png" alt="Black as secondary, light purple moves to tertiary" />
+      <div class="ladder-row ladder-lg">
+        <span class="lad"><span class="btn-demo p">Button Label</span><small>Primary</small></span>
+        <span class="lad"><span class="btn-demo" style="background:#171717;border-color:#171717;color:#fff">Button Label</span><small>Secondary · black</small></span>
+        <span class="lad"><span class="btn-demo" style="background:#E9D6FF;border-color:#E9D6FF;color:#4801A0">Button Label</span><small>Tertiary · soft purple</small></span>
+      </div>
       <img class="shot screens" src="assets/screens-black-secondary.png" alt="App screens with black secondary buttons" />
     </div>
   </section>
@@ -340,7 +348,11 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
   <section class="slide">
     <div class="wrap wide">
       <div class="eyebrow"><span class="num">05</span> Second mapping: black as tertiary</div>
-      <img class="shot spec" src="assets/spec-black-tertiary.png" alt="Black as tertiary, secondary stays light purple" />
+      <div class="ladder-row ladder-lg">
+        <span class="lad"><span class="btn-demo p">Button Label</span><small>Primary</small></span>
+        <span class="lad"><span class="btn-demo" style="background:#E9D6FF;border-color:#E9D6FF;color:#4801A0">Button Label</span><small>Secondary · soft purple</small></span>
+        <span class="lad"><span class="btn-demo" style="background:#171717;border-color:#171717;color:#fff">Button Label</span><small>Tertiary · black</small></span>
+      </div>
       <img class="shot screens" src="assets/screens-black-tertiary.png" alt="App screens with black tertiary buttons" />
     </div>
   </section>
@@ -397,10 +409,31 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
     </div>
   </section>
 
+  <!-- 09 — WHY NOT TEXT ONLY -->
+  <section class="slide">
+    <div class="wrap wide">
+      <div class="split notext">
+        <div>
+          <div class="eyebrow"><span class="num">09</span> Why not text only</div>
+          <h3>Text-only works for simple pages. Our editor needs more.</h3>
+          <ul class="clean">
+            <li><strong>Actions sit next to images and colour.</strong> Covers, photos and themes surround the buttons. A label with no shape gets lost.</li>
+            <li><strong>They're real actions, not links.</strong> Regenerate or Add Photo change the product. As plain text they read like captions.</li>
+            <li><strong>Dense screens need clear targets.</strong> A visible shape makes each action easy to spot and tap.</li>
+          </ul>
+        </div>
+        <div class="phones compare">
+          <figure><img src="assets/text-cover.png" alt="Design your cover with text-only tertiary"><figcaption>Text-only</figcaption></figure>
+          <figure><img src="assets/real-cover.png" alt="Design your cover with outline tertiary"><figcaption>Outline</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 09 — OUTLINE OPTIONS -->
   <section class="slide">
     <div class="wrap wide">
-      <div class="eyebrow"><span class="num">09</span> Which outline</div>
+      <div class="eyebrow"><span class="num">10</span> Which outline</div>
       <h3>Five outlines tested. Grey keeps the ladder intact.</h3>
       <div class="outline-opts">
         <div class="opt">
@@ -458,7 +491,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
   <!-- 10 — TWO OPTIONS -->
   <section class="slide">
     <div class="wrap wide">
-      <div class="eyebrow"><span class="num">10</span> Two options</div>
+      <div class="eyebrow"><span class="num">11</span> Two options</div>
       <h3>Two ladders to decide between.</h3>
       <div class="cols c2 ladders">
         <div class="card ladder">
@@ -497,7 +530,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
     <div class="wrap wide">
       <div class="split">
         <div>
-          <div class="eyebrow"><span class="num">10</span> For reference</div>
+          <div class="eyebrow"><span class="num">11</span> For reference</div>
           <h3>What a text-only tertiary looks like.</h3>
           <div class="ladder-row" style="margin-top:1.6rem">
             <span class="btn-demo p">Primary</span>
@@ -514,7 +547,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
   <!-- 11 — ON REAL SCREENS -->
   <section class="slide">
     <div class="wrap wide">
-      <div class="eyebrow"><span class="num">11</span> On real screens · Option B</div>
+      <div class="eyebrow"><span class="num">12</span> On real screens · Option B</div>
       <h3>The outline tertiary, in context.</h3>
       <div class="screens-row">
         <figure><img src="assets/real-preview-finish.png" alt="Your book is ready screen"><figcaption><strong>All three tiers</strong>Add to Cart · Edit My Book, Share · Regenerate</figcaption></figure>
@@ -529,7 +562,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
   <section class="slide">
     <div class="blob b3"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="num">12</span> Challenges to the outline</div>
+      <div class="eyebrow"><span class="num">13</span> Challenges to the outline</div>
       <div class="cols c2" style="margin-top:1rem;align-items:start">
         <div>
           <h3>What we've heard</h3>
@@ -553,7 +586,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
   <section class="slide">
     <div class="blob b2"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="num">13</span> Next steps</div>
+      <div class="eyebrow"><span class="num">14</span> Next steps</div>
       <ul class="clean">
         <li>Validate the outline tertiary together</li>
         <li>Build the variants in the library</li>
