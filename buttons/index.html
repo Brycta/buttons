@@ -168,7 +168,7 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
 .stats-list{display:flex;flex-direction:column;gap:1.1rem;margin-top:2rem}
 .stats-list div{display:flex;align-items:baseline;gap:1rem;font-size:var(--body-lg);color:var(--ink-soft)}
 .stats-list .big{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,3.6vw,3.2rem);color:var(--indigo-deep);min-width:3.2ch}
-.outline-opts{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.6vw,24px);margin-top:1.8rem}
+.outline-opts{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(14px,1.6vw,24px);margin-top:1.8rem}
 .outline-opts .opt{position:relative;background:rgba(255,255,255,.62);border:1px solid var(--line);border-radius:18px;padding:clamp(16px,1.8vw,24px);box-shadow:0 10px 30px -22px rgba(38,32,28,.35)}
 .outline-opts .opt.chosen{border:2px solid var(--indigo-deep);background:#fff}
 .outline-opts .opt .tag{position:absolute;top:-.9em;left:clamp(16px,1.8vw,24px)}
@@ -373,7 +373,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
   <section class="slide">
     <div class="wrap wide">
       <div class="eyebrow"><span class="num">09</span> Which outline</div>
-      <h3>Four outlines tested. Grey keeps the ladder intact.</h3>
+      <h3>Five outlines tested. Grey keeps the ladder intact.</h3>
       <div class="outline-opts">
         <div class="opt">
           <div class="btn-demo" style="border-color:#1C1917;color:#171717">Button Label</div>
@@ -402,6 +402,16 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
             <li class="pro">On brand</li>
             <li class="con">Three purple buttons in a row: primary, secondary, tertiary</li>
             <li class="con">Reads like another secondary, so the hierarchy blurs</li>
+          </ul>
+        </div>
+        <div class="opt">
+          <div class="btn-demo" style="border-color:#BC85FE;color:#4801A0">Button Label</div>
+          <h4>Mid purple outline</h4>
+          <ul class="pc">
+            <li class="pro">On brand, softer than the dark purple</li>
+            <li class="pro">Label stays legible (11.8:1)</li>
+            <li class="con">Still three purple buttons in a row</li>
+            <li class="con">Border is 2.7:1, same as the grey</li>
           </ul>
         </div>
         <div class="opt">
