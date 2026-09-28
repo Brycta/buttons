@@ -146,6 +146,7 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
 .wrap.wide{max-width:1500px}
 .shot{display:block;max-width:100%;height:auto;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px -22px rgba(38,32,28,.35)}
 .shot.spec{max-height:26vh;margin-top:1.6rem}
+.shot.hero{width:100%;max-width:1000px;max-height:56vh;object-fit:contain;margin-top:2.4rem;padding:clamp(12px,2vw,28px)}
 .shot.screens{max-height:52vh;margin-top:1.2rem}
 .split{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,4vw,64px);align-items:center}
 .split .shot{max-height:62vh}
@@ -195,13 +196,7 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
     <div class="wrap">
       <div class="eyebrow"><span class="chapter">In one slide</span></div>
       <h2 class="title">What's changing in the <span class="grad">button set</span>.</h2>
-      <div class="areas">
-        <div class="area"><div class="name">Primary</div><div class="desc">Stays the same.</div></div>
-        <div class="area"><div class="name">Secondary</div><div class="desc">Stays the same.</div></div>
-        <div class="area"><div class="name">Tertiary</div><div class="desc"><strong>Changes.</strong></div></div>
-        <div class="area"><div class="name">Destructive</div><div class="desc"><strong>New.</strong></div></div>
-      </div>
-      <div class="img-ph slim">Button set visual<small>visual to come</small></div>
+      <img class="shot hero" src="assets/button-set-changes.png" alt="Old to new production buttons: primary and secondary unchanged, tertiary to be decided, new outlined destructive button" />
     </div>
   </section>
 
