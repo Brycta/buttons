@@ -193,6 +193,12 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
 .phones img{height:38vh;width:auto;border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 30px -22px rgba(38,32,28,.35);background:#fff}
 .phones.solo img{height:70vh}
 .card.ladder ul.pc{margin-top:.2rem}
+.screens-row{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,24px);margin-top:1.4rem;align-items:start}
+.screens-row figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:.8rem}
+.screens-row img{height:56vh;width:auto;max-width:100%;object-fit:contain;border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 30px -22px rgba(38,32,28,.35);background:#fff}
+.screens-row figcaption{font-size:var(--caption);color:var(--ink-soft);line-height:1.4;text-align:center;max-width:26ch}
+.screens-row figcaption strong{display:block;font-size:var(--body);margin-bottom:.15rem}
+@media(max-width:820px){.screens-row{grid-template-columns:1fr 1fr}}
 /* ---- chrome ---- */
 #progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--sanbeam),var(--pink),var(--indigo-bright));z-index:50;transition:width .5s var(--ease)}
 #counter{position:fixed;bottom:22px;right:26px;font-size:var(--caption);color:var(--ink-mute);font-weight:600;letter-spacing:.1em;z-index:50}
@@ -496,11 +502,17 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
     </div>
   </section>
 
-  <!-- 11 — ON REAL SCREENS (visuals TBD) -->
+  <!-- 11 — ON REAL SCREENS -->
   <section class="slide">
     <div class="wrap wide">
-      <div class="eyebrow"><span class="num">11</span> On real screens</div>
-      <div class="img-ph">Outline tertiary on real screens<small>visuals to come · from BUTTON MAPPING v2</small></div>
+      <div class="eyebrow"><span class="num">11</span> On real screens · Option B</div>
+      <h3>The outline tertiary, in context.</h3>
+      <div class="screens-row">
+        <figure><img src="assets/real-preview-finish.png" alt="Your book is ready screen"><figcaption><strong>All three tiers</strong>Add to Cart · Edit My Book, Share · Regenerate</figcaption></figure>
+        <figure><img src="assets/real-delivery.png" alt="Delivery info screen"><figcaption><strong>Inline edits</strong>Add and Change stay quiet next to Continue</figcaption></figure>
+        <figure><img src="assets/real-confirmation.png" alt="Order confirmation screen"><figcaption><strong>Primary + secondary</strong>Back to home leads, Create account supports</figcaption></figure>
+        <figure><img src="assets/real-cover.png" alt="Design your cover screen"><figcaption><strong>Optional actions</strong>Regenerate and Add Photo never compete with Start My Book</figcaption></figure>
+      </div>
     </div>
   </section>
 
