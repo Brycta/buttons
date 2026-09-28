@@ -137,6 +137,7 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
 .timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2rem}
 .timeline .step{border-top:3px solid var(--line);padding-top:1rem}
 .timeline .step.on{border-color:var(--sanbeam)}
+.timeline .step.pending{visibility:hidden}
 .timeline .step .when{font-size:var(--caption);color:var(--ink-mute);font-weight:700;letter-spacing:.08em}
 .timeline .step .what{font-weight:700;margin:.3rem 0 .4rem;font-size:var(--body-lg)}
 .timeline .step .det{font-size:var(--caption);color:var(--ink-soft);line-height:1.4}
@@ -200,8 +201,8 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
     </div>
   </section>
 
-  <!-- TIMELINE -->
-  <section class="slide">
+  <!-- TIMELINE (build: step 5 appears on the next click) -->
+  <section class="slide" data-group="timeline">
     <div class="wrap">
       <div class="eyebrow"><span class="chapter">The decisions, in order</span></div>
       <div class="timeline t5">
@@ -209,7 +210,20 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
         <div class="step"><div class="when">14 – 21 AUG</div><div class="what">Explore &amp; vote</div><div class="det">Team proposals reviewed in DS Office Hours. Unanimous vote to add a black neutral.</div></div>
         <div class="step"><div class="when">26 AUG</div><div class="what">Align</div><div class="det">Black button screens reviewed with Benoit, then with Vincent. Principles agreed.</div></div>
         <div class="step"><div class="when">24 SEP</div><div class="what">Challenge</div><div class="det">Black as secondary is challenged in the product design meeting.</div></div>
-        <div class="step on"><div class="when">NOW</div><div class="what">Neutral outline</div><div class="det">A neutral outline tertiary is proposed and mapped on real screens.</div></div>
+        <div class="step on pending"><div class="when">NOW</div><div class="what">Neutral outline</div><div class="det">Black doesn't work as a secondary or as a tertiary, so despite the decision it isn't usable for us. Proposal: a neutral outline tertiary.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-group="timeline">
+    <div class="wrap">
+      <div class="eyebrow"><span class="chapter">The decisions, in order</span></div>
+      <div class="timeline t5">
+        <div class="step"><div class="when">31 JUL</div><div class="what">Rework the tertiary</div><div class="det">Design System UI workshop: the team votes to redo the tertiary button.</div></div>
+        <div class="step"><div class="when">14 – 21 AUG</div><div class="what">Explore &amp; vote</div><div class="det">Team proposals reviewed in DS Office Hours. Unanimous vote to add a black neutral.</div></div>
+        <div class="step"><div class="when">26 AUG</div><div class="what">Align</div><div class="det">Black button screens reviewed with Benoit, then with Vincent. Principles agreed.</div></div>
+        <div class="step"><div class="when">24 SEP</div><div class="what">Challenge</div><div class="det">Black as secondary is challenged in the product design meeting.</div></div>
+        <div class="step on"><div class="when">NOW</div><div class="what">Neutral outline</div><div class="det">Black doesn't work as a secondary or as a tertiary, so despite the decision it isn't usable for us. Proposal: a neutral outline tertiary.</div></div>
       </div>
     </div>
   </section>
