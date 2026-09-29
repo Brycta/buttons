@@ -9,3 +9,4 @@ wrangler.jsonc
 *.mov
 *.gif
 .DS_Store
+.wrangler

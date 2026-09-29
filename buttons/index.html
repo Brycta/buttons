@@ -177,6 +177,14 @@ ul.cross li::before{content:"✕";background:none;color:var(--pink);font-weight:
 .outline-opts .opt.chosen{border:2px solid var(--indigo-deep);background:#fff}
 .outline-opts .opt .tag{position:absolute;top:-.9em;left:clamp(16px,1.8vw,24px)}
 .btn-demo{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 24px;border:1px solid;border-radius:48px;background:#fff;font-family:var(--font);font-weight:500;font-size:16px;margin:.4rem 0 1.1rem}
+.oc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.6vw,24px);margin-top:1.8rem}
+.oc-grid .card h4{font-size:var(--body);margin-bottom:.35rem}
+.oc-grid .card p{font-size:clamp(.95rem,1.2vw,1.1rem)}
+.oc-grid .btn-demo{margin:0 0 1rem}
+.oc-take{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.6vw,24px);margin-top:1.6rem}
+.oc-take p{font-size:clamp(.95rem,1.2vw,1.1rem);color:var(--ink-soft);line-height:1.45;border-top:2px solid var(--ink);padding-top:.7rem}
+.oc-take strong{display:block;color:var(--ink);font-size:var(--body);margin-bottom:.2rem}
+@media(max-width:820px){.oc-grid{grid-template-columns:1fr 1fr}.oc-take{grid-template-columns:1fr}}
 .outline-opts h4{font-size:var(--body-lg);font-weight:700;margin-bottom:.7rem}
 ul.pc{list-style:none;display:flex;flex-direction:column;gap:.55rem}
 ul.pc li{font-size:var(--caption);line-height:1.4;color:var(--ink-soft);padding-left:1.4rem;position:relative}
@@ -254,9 +262,9 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
       <div class="timeline t5">
         <div class="step"><div class="when">31 JUL</div><div class="what">Rework the tertiary</div><div class="det">Design System UI workshop: the team votes to redo the tertiary button.</div></div>
         <div class="step"><div class="when">14 – 21 AUG</div><div class="what">Explore &amp; vote</div><div class="det">Team proposals reviewed in DS Office Hours. Unanimous vote to add a black neutral.</div></div>
-        <div class="step"><div class="when">26 AUG</div><div class="what">Align</div><div class="det">Black button screens reviewed with Benoit, then with Vincent. Principles agreed.</div></div>
+        <div class="step"><div class="when">26 AUG</div><div class="what">Align</div><div class="det">Black button screens reviewed with Benoit, then with Vincent.</div></div>
         <div class="step"><div class="when">24 SEP</div><div class="what">Challenge</div><div class="det">Black as secondary is challenged in the product design meeting. Black as tertiary is then ruled out too.</div></div>
-        <div class="step on pending"><div class="when">NOW</div><div class="what">Neutral outline</div><div class="det">Black doesn't work as a secondary or as a tertiary, so despite the decision it isn't usable for us. Proposal: a neutral outline tertiary.</div></div>
+        <div class="step on pending"><div class="when">NOW</div><div class="what">Neutral outline</div><div class="det">Black doesn't work as a secondary or as a tertiary, so despite the decision it isn't usable for us. Proposal: an outline button.</div></div>
       </div>
     </div>
   </section>
@@ -267,9 +275,9 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
       <div class="timeline t5">
         <div class="step"><div class="when">31 JUL</div><div class="what">Rework the tertiary</div><div class="det">Design System UI workshop: the team votes to redo the tertiary button.</div></div>
         <div class="step"><div class="when">14 – 21 AUG</div><div class="what">Explore &amp; vote</div><div class="det">Team proposals reviewed in DS Office Hours. Unanimous vote to add a black neutral.</div></div>
-        <div class="step"><div class="when">26 AUG</div><div class="what">Align</div><div class="det">Black button screens reviewed with Benoit, then with Vincent. Principles agreed.</div></div>
+        <div class="step"><div class="when">26 AUG</div><div class="what">Align</div><div class="det">Black button screens reviewed with Benoit, then with Vincent.</div></div>
         <div class="step"><div class="when">24 SEP</div><div class="what">Challenge</div><div class="det">Black as secondary is challenged in the product design meeting. Black as tertiary is then ruled out too.</div></div>
-        <div class="step on"><div class="when">NOW</div><div class="what">Neutral outline</div><div class="det">Black doesn't work as a secondary or as a tertiary, so despite the decision it isn't usable for us. Proposal: a neutral outline tertiary.</div></div>
+        <div class="step on"><div class="when">NOW</div><div class="what">Neutral outline</div><div class="det">Black doesn't work as a secondary or as a tertiary, so despite the decision it isn't usable for us. Proposal: an outline button.</div></div>
       </div>
     </div>
   </section>
@@ -382,12 +390,11 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
     <div class="blob b1"></div>
     <div class="wrap">
       <div class="eyebrow"><span class="num">07</span> Where we're going</div>
-      <h2 class="title">A <span class="grad">neutral outline</span> tertiary.</h2>
-      <p class="lead" style="max-width:60ch">Across 16 benchmarked systems, hierarchy steps down in weight: a filled primary, a lighter secondary, and a tertiary with the least visual weight. Our set follows the same ladder: it's the <strong>standard way to build buttons</strong>, and the one that reinvents the wheel the least.</p>
+      <h2 class="title">An <span class="grad">outline</span> button.</h2>
       <div class="cols c3" style="margin-top:2rem">
-        <div class="card"><h4>Keeps the order</h4><p>Lighter than the secondary, so primary → secondary → tertiary reads correctly.</p></div>
-        <div class="card"><h4>Neutral</h4><p>No brand colour on the quietest action. Black stays available as an exception.</p></div>
-        <div class="card"><h4>It follows standards</h4><p>Filled, then lighter, then lightest: the same ladder as the 16 benchmarked systems.</p></div>
+        <div class="card"><h4>The benchmark</h4><p>Across 16 benchmarked systems, hierarchy steps down in weight: a filled primary, a lighter secondary, and a tertiary with the least visual weight.</p></div>
+        <div class="card"><h4>It follows standards</h4><p>Our set follows the same ladder: it's the standard way to build buttons.</p></div>
+        <div class="card"><h4>No reinventing the wheel</h4><p>Of the options, it's the one that reinvents the wheel the least.</p></div>
       </div>
     </div>
   </section>
@@ -407,6 +414,25 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
           <p class="kicker">Etsy, Nike, Vercel, Shopify, eBay, Decathlon, Airbnb, Uber, Pinterest, Stripe, Alibaba, Skyscanner, IKEA, Duolingo, Rakuten, Mailchimp. Scroll the image for every system.</p>
         </div>
         <div class="bench-scroll"><img src="assets/benchmark-button-hierarchies.png?v=16" alt="Matrix of primary, secondary, tertiary and other buttons across 16 design systems, with Picta's proposed set for comparison" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08b — OUTLINE COLOURS IN THE BENCHMARK -->
+  <section class="slide">
+    <div class="wrap wide">
+      <div class="eyebrow"><span class="num">08</span> Benchmark · outline colours</div>
+      <h3>Outlines are neutral by default.</h3>
+      <div class="oc-grid">
+        <div class="card"><span class="btn-demo" style="border-color:#191919;color:#191919">Button</span><h4>Black border</h4><p>Etsy, Airbnb, IKEA. All three have black primaries.</p></div>
+        <div class="card"><span class="btn-demo" style="border-color:#C9C4BF;color:#191919">Button</span><h4>Light grey border, dark label</h4><p>Nike, Vercel, Shopify, Stripe, Alibaba, and eBay's tertiary.</p></div>
+        <div class="card"><span class="btn-demo" style="border-color:#C9C4BF;color:#3643BA">Button</span><h4>Grey border, brand label</h4><p>Decathlon, Duolingo.</p></div>
+        <div class="card"><span class="btn-demo" style="border-color:#0968F6;color:#0968F6">Button</span><h4>Brand border and label</h4><p>eBay's secondary, Rakuten.</p></div>
+      </div>
+      <div class="oc-take">
+        <p><strong>Neutral is the default</strong>10 of the 12 outline secondaries have a neutral border (black or grey). Only eBay and Rakuten use a full brand-colour outline.</p>
+        <p><strong>Black only next to black</strong>Black borders only appear next to black primaries. In brand-colour sets, the neutral outline is always light grey.</p>
+        <p><strong>Grey sits below brand</strong>Where a set has both a brand-colour outline and a grey outline, grey is the lower tier. eBay is the only example.</p>
       </div>
     </div>
   </section>
@@ -542,6 +568,20 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
           <p class="lead">The most common tertiary in the benchmark (13/16). Shown for comparison, not proposed.</p>
         </div>
         <div class="phones solo"><img src="assets/text-selection.png" alt="Photo selection screen with text-only tertiary"><img src="assets/text-memorial.png" alt="Memorial card screen with text-only tertiary"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11a — ON REAL SCREENS, OPTION A -->
+  <section class="slide">
+    <div class="wrap wide">
+      <div class="eyebrow"><span class="num">12</span> On real screens · Option A</div>
+      <h3>The outline secondary, in context.</h3>
+      <div class="screens-row">
+        <figure><img src="assets/optA-real-preview-finish.png" alt="Your book is ready screen, option A"><figcaption><strong>All three tiers</strong>Add to Cart · Edit My Book, Share · Regenerate</figcaption></figure>
+        <figure><img src="assets/optA-real-delivery.png" alt="Delivery info screen, option A"><figcaption><strong>Inline edits</strong>Add and Change become soft fills next to Continue</figcaption></figure>
+        <figure><img src="assets/optA-real-confirmation.png" alt="Order confirmation screen, option A"><figcaption><strong>Primary + secondary</strong>Back to home leads, Create account becomes an outline</figcaption></figure>
+        <figure><img src="assets/optA-real-cover.png" alt="Design your cover screen, option A"><figcaption><strong>Optional actions</strong>Regenerate and Add Photo become soft fills</figcaption></figure>
       </div>
     </div>
   </section>
