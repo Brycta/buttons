@@ -5,7 +5,7 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The tertiary button</title>
+<title>The button hierarchy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Aperture type: Bricolage Grotesque (display) + Inter (body) -->
@@ -239,19 +239,24 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
     <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
     <div class="wrap">
       <img class="logo-anim" src="assets/picta-logo.webp" alt="Picta" />
-      <div class="eyebrow"><span class="chapter">Aperture Design System</span> · ADS-115 · September 2026</div>
-      <h1 class="display">Rethinking the <span class="grad">tertiary button</span></h1>
+      <div class="eyebrow"><span class="chapter">Aperture Design System</span> · ADS-115 · October 2026</div>
+      <h1 class="display">Rethinking the <span class="grad">button hierarchy</span></h1>
       <p class="lead">Where we're going, and how we got here.</p>
     </div>
   </section>
 
-  <!-- WHERE WE'RE GOING -->
+  <!-- IN ONE SLIDE -->
   <section class="slide">
     <div class="blob b1"></div>
     <div class="wrap">
       <div class="eyebrow"><span class="chapter">In one slide</span></div>
-      <h2 class="title">What's changing in the <span class="grad">button set</span>.</h2>
-      <img class="shot hero" src="assets/button-set-changes.png" alt="Old to new production buttons: primary and secondary unchanged, tertiary to be decided, new outlined destructive button" />
+      <h2 class="title">A <span class="grad">grey outline</span> secondary. A <span class="grad">text-only</span> tertiary.</h2>
+      <div class="ladder-row ladder-lg">
+        <span class="lad"><span class="btn-demo p">Button Label</span><small>Primary · unchanged</small></span>
+        <span class="lad"><span class="btn-demo" style="border-color:#A59D97;color:#171717">Button Label</span><small>Secondary · grey outline</small></span>
+        <span class="lad"><span class="btn-demo" style="border-color:transparent;background:transparent;color:#4801A0;padding:0 10px">Button Label</span><small>Tertiary · text only</small></span>
+        <span class="lad"><span class="btn-demo" style="border-color:#E993A9;color:#AC2038">Delete photo</span><small>Destructive · outline</small></span>
+      </div>
     </div>
   </section>
 
@@ -264,7 +269,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
         <div class="step"><div class="when">14 – 21 AUG</div><div class="what">Explore &amp; vote</div><div class="det">Team proposals reviewed in DS Office Hours. Unanimous vote to add a black neutral.</div></div>
         <div class="step"><div class="when">26 AUG</div><div class="what">Align</div><div class="det">Black button screens reviewed with Benoit, then with Vincent.</div></div>
         <div class="step"><div class="when">24 SEP</div><div class="what">Challenge</div><div class="det">Black as secondary is challenged in the product design meeting. Black as tertiary is then ruled out too.</div></div>
-        <div class="step on pending"><div class="when">NOW</div><div class="what">Outline button</div><div class="det">Black doesn't work as a secondary or as a tertiary, so despite the decision it isn't usable for us. Proposal: an outline button.</div></div>
+        <div class="step on pending"><div class="when">NOW</div><div class="what">Grey outline + text</div><div class="det">Black doesn't work as a secondary or as a tertiary, so despite the decision it isn't usable for us. Proposal: a grey outline secondary and a text-only tertiary.</div></div>
       </div>
     </div>
   </section>
@@ -277,7 +282,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
         <div class="step"><div class="when">14 – 21 AUG</div><div class="what">Explore &amp; vote</div><div class="det">Team proposals reviewed in DS Office Hours. Unanimous vote to add a black neutral.</div></div>
         <div class="step"><div class="when">26 AUG</div><div class="what">Align</div><div class="det">Black button screens reviewed with Benoit, then with Vincent.</div></div>
         <div class="step"><div class="when">24 SEP</div><div class="what">Challenge</div><div class="det">Black as secondary is challenged in the product design meeting. Black as tertiary is then ruled out too.</div></div>
-        <div class="step on"><div class="when">NOW</div><div class="what">Outline button</div><div class="det">Black doesn't work as a secondary or as a tertiary, so despite the decision it isn't usable for us. Proposal: an outline button.</div></div>
+        <div class="step on"><div class="when">NOW</div><div class="what">Grey outline + text</div><div class="det">Black doesn't work as a secondary or as a tertiary, so despite the decision it isn't usable for us. Proposal: a grey outline secondary and a text-only tertiary.</div></div>
       </div>
     </div>
   </section>
@@ -390,11 +395,11 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
     <div class="blob b1"></div>
     <div class="wrap">
       <div class="eyebrow"><span class="num">07</span> Where we're going</div>
-      <h2 class="title">An <span class="grad">outline</span> button.</h2>
+      <h2 class="title">A <span class="grad">grey outline</span> secondary. A <span class="grad">text-only</span> tertiary.</h2>
       <div class="cols c3" style="margin-top:2rem">
-        <div class="card"><h4>The benchmark</h4><p>Across 16 benchmarked systems, hierarchy steps down in weight: a filled primary, a lighter secondary, and a tertiary with the least visual weight.</p></div>
-        <div class="card"><h4>It follows standards</h4><p>Our set follows the same ladder: it's the standard way to build buttons.</p></div>
-        <div class="card"><h4>No reinventing the wheel</h4><p>Of the options, it's the one that reinvents the wheel the least.</p></div>
+        <div class="card"><h4>It follows the benchmark</h4><p>12 of 16 systems use an outline secondary, and 13 of 16 a text-only tertiary. It's the standard way to build buttons, and the one that reinvents the wheel the least.</p></div>
+        <div class="card"><h4>It stays clear of our selectors</h4><p>A purple outline looks like the selectors we use throughout the editor. A neutral grey interferes the least with the rest of the system.</p></div>
+        <div class="card"><h4>It lightens dense screens</h4><p>Text-only is the lightest tertiary, so busy screens breathe. The Link button already exists for it.</p></div>
       </div>
     </div>
   </section>
@@ -413,7 +418,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
           </div>
           <p class="kicker">Etsy, Nike, Vercel, Shopify, eBay, Decathlon, Airbnb, Uber, Pinterest, Stripe, Alibaba, Skyscanner, IKEA, Duolingo, Rakuten, Mailchimp. Scroll the image for every system.</p>
         </div>
-        <div class="bench-scroll"><img src="assets/benchmark-button-hierarchies.png?v=16" alt="Matrix of primary, secondary, tertiary and other buttons across 16 design systems, with Picta's proposed set for comparison" /></div>
+        <div class="bench-scroll"><img src="assets/benchmark-button-hierarchies.png?v=16" alt="Matrix of primary, secondary, tertiary and other buttons across 16 design systems, with an earlier Picta proposal for comparison" /></div>
       </div>
     </div>
   </section>
@@ -437,32 +442,11 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
     </div>
   </section>
 
-  <!-- 09 — WHY NOT TEXT ONLY -->
+  <!-- 09 — WHICH OUTLINE -->
   <section class="slide">
     <div class="wrap wide">
-      <div class="split notext">
-        <div>
-          <div class="eyebrow"><span class="num">09</span> Why not text only</div>
-          <h3>Text-only works for simple pages. Our editor needs more.</h3>
-          <ul class="clean">
-            <li><strong>Actions sit next to images and colour.</strong> Covers, photos and themes surround the buttons. A label with no shape gets lost.</li>
-            <li><strong>They're real actions, not links.</strong> Regenerate or Add Photo change the product. As plain text they read like captions.</li>
-            <li><strong>Dense screens need clear targets.</strong> A visible shape makes each action easy to spot and tap.</li>
-          </ul>
-        </div>
-        <div class="phones compare">
-          <figure><img src="assets/text-cover.png" alt="Design your cover with text-only tertiary"><figcaption>Text-only</figcaption></figure>
-          <figure><img src="assets/real-cover.png" alt="Design your cover with outline tertiary"><figcaption>Outline</figcaption></figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 09 — OUTLINE OPTIONS -->
-  <section class="slide">
-    <div class="wrap wide">
-      <div class="eyebrow"><span class="num">10</span> Which outline</div>
-      <h3>Five outlines tested. Grey keeps the ladder intact.</h3>
+      <div class="eyebrow"><span class="num">09</span> Which outline for the secondary</div>
+      <h3>Five outlines tested. Grey is the one that fits.</h3>
       <div class="outline-opts">
         <div class="opt">
           <div class="btn-demo" style="border-color:#1C1917;color:#171717">Button Label</div>
@@ -470,7 +454,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
           <ul class="pc">
             <li class="pro">Crisp and neutral, strong contrast (17.5:1)</li>
             <li class="con">Heavy: brings back the weight of black we just ruled out</li>
-            <li class="con">Competes with the light purple secondary</li>
+            <li class="con">In the benchmark, black outlines only sit next to black primaries</li>
           </ul>
         </div>
         <div class="opt chosen">
@@ -478,8 +462,9 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
           <div class="btn-demo" style="border-color:#A59D97;color:#171717">Button Label</div>
           <h4>Grey outline</h4>
           <ul class="pc">
-            <li class="pro">Lightest weight, so it sits clearly below the secondary</li>
-            <li class="pro">Neutral, and the label stays fully legible (17.9:1)</li>
+            <li class="pro">The neutral outline brand-colour systems use</li>
+            <li class="pro">Clearly different from the purple primary</li>
+            <li class="pro">Label stays fully legible (17.9:1)</li>
             <li class="pro">Uses the existing Outline token</li>
             <li class="con">Border is 2.7:1, under the 3:1 guideline for UI edges</li>
           </ul>
@@ -489,8 +474,8 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
           <h4>Dark purple outline</h4>
           <ul class="pc">
             <li class="pro">On brand</li>
-            <li class="con">Three purple buttons in a row: primary, secondary, tertiary</li>
-            <li class="con">Reads like another secondary, so the hierarchy blurs</li>
+            <li class="con">Looks like a selected selector</li>
+            <li class="con">Two purple buttons compete side by side</li>
           </ul>
         </div>
         <div class="opt">
@@ -499,8 +484,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
           <ul class="pc">
             <li class="pro">On brand, softer than the dark purple</li>
             <li class="pro">Label stays legible (11.8:1)</li>
-            <li class="con">Still three purple buttons in a row</li>
-            <li class="con">Border is 2.7:1, same as the grey</li>
+            <li class="con">Same purple as our selected photos and selectors</li>
           </ul>
         </div>
         <div class="opt">
@@ -509,130 +493,154 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
           <ul class="pc">
             <li class="pro">On brand and soft</li>
             <li class="con">Border nearly invisible (1.35:1)</li>
-            <li class="con">Same colour as the secondary fill, so it looks like a disabled secondary</li>
+            <li class="con">Reads as a disabled button</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 10 — TWO OPTIONS -->
+  <!-- 10 — WHY TEXT ONLY -->
+  <section class="slide">
+    <div class="blob b2"></div>
+    <div class="wrap">
+      <div class="eyebrow"><span class="num">10</span> Why text only for the tertiary</div>
+      <h3>The lightest tertiary, and the most common one.</h3>
+      <div class="ladder-row ladder-lg">
+        <span class="lad"><span class="btn-demo p">Button Label</span><small>Primary</small></span>
+        <span class="lad"><span class="btn-demo" style="border-color:#A59D97;color:#171717">Button Label</span><small>Secondary</small></span>
+        <span class="lad"><span class="btn-demo" style="border-color:transparent;background:transparent;color:#4801A0;padding:0 10px">Button Label</span><small>Tertiary</small></span>
+      </div>
+      <div class="cols c3" style="margin-top:2rem">
+        <div class="card"><h4>The most common pattern</h4><p>13 of 16 benchmarked systems use a text-only tertiary.</p></div>
+        <div class="card"><h4>It lightens dense screens</h4><p>No shape and no fill, so it never competes with the primary or the secondary.</p></div>
+        <div class="card"><h4>It already exists</h4><p>The Link button is already built for text-only actions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 — OTHER DIRECTIONS -->
   <section class="slide">
     <div class="wrap wide">
-      <div class="eyebrow"><span class="num">11</span> Two options</div>
-      <h3>Two ladders to decide between.</h3>
+      <div class="eyebrow"><span class="num">11</span> Other directions explored</div>
+      <h3>What we tried, and why we moved on.</h3>
       <div class="cols c2 ladders">
         <div class="card ladder">
-          <span class="tag">Option A · the typical ladder</span>
+          <span class="tag">Outline secondary, soft fill tertiary</span>
           <div class="ladder-row">
             <span class="btn-demo p">Primary</span>
             <span class="btn-demo" style="border-color:#BC85FE;color:#4801A0">Secondary</span>
             <span class="btn-demo s">Tertiary</span>
           </div>
-          <div class="phones"><img src="assets/optA-selection.png" alt="Photo selection screen, option A"><img src="assets/optA-memorial.png" alt="Memorial card screen, option A"></div>
           <ul class="pc">
-            <li class="pro">Outline secondary is the norm: 12/16 benchmarked systems</li>
             <li class="con">The soft fill tertiary looks heavier than the outline secondary</li>
+            <li class="con">The purple outline looks like our selectors</li>
           </ul>
         </div>
         <div class="card ladder">
-          <span class="tag solid">Option B · closest to what we agreed</span>
+          <span class="tag">Soft fill secondary, outline tertiary</span>
           <div class="ladder-row">
             <span class="btn-demo p">Primary</span>
             <span class="btn-demo s">Secondary</span>
             <span class="btn-demo" style="border-color:#BC85FE;color:#4801A0">Tertiary</span>
           </div>
-          <div class="phones"><img src="assets/optB-selection.png" alt="Photo selection screen, option B"><img src="assets/optB-memorial.png" alt="Memorial card screen, option B"></div>
           <ul class="pc">
-            <li class="pro">Keeps today's secondary: only the tertiary changes</li>
-            <li class="pro">Each tier is lighter than the one above it</li>
-            <li class="con">An outline tertiary is rare (1/16 benchmarked systems)</li>
+            <li class="con">An outline tertiary is rare (1 of 16 benchmarked systems)</li>
+            <li class="con">The purple outline looks like our selectors</li>
           </ul>
         </div>
       </div>
+      <p class="kicker">Black as secondary and black as tertiary were ruled out earlier: too much visual weight.</p>
     </div>
   </section>
 
-  <!-- 10b — TEXT-ONLY REFERENCE -->
+  <!-- 12 — ORIGINAL VS RETROFITTED -->
   <section class="slide">
     <div class="wrap wide">
-      <div class="split">
-        <div>
-          <div class="eyebrow"><span class="num">11</span> For reference</div>
-          <h3>What a text-only tertiary looks like.</h3>
-          <div class="ladder-row" style="margin-top:1.6rem">
-            <span class="btn-demo p">Primary</span>
-            <span class="btn-demo" style="border-color:#BC85FE;color:#4801A0">Secondary</span>
-            <span class="btn-demo" style="border-color:transparent;background:transparent;color:#4801A0;padding:0 8px">Tertiary</span>
-          </div>
-          <p class="lead">The most common tertiary in the benchmark (13/16). Shown for comparison, not proposed.</p>
-        </div>
-        <div class="phones solo"><img src="assets/text-selection.png" alt="Photo selection screen with text-only tertiary"><img src="assets/text-memorial.png" alt="Memorial card screen with text-only tertiary"></div>
+      <div class="eyebrow"><span class="num">12</span> On real screens</div>
+      <h3>Original screens, and the same screens retrofitted.</h3>
+      <div class="cols c2" style="margin-top:1.6rem">
+        <div class="img-ph">Original screens<small>To add</small></div>
+        <div class="img-ph">Retrofitted with the new hierarchy<small>To add</small></div>
       </div>
     </div>
   </section>
 
-  <!-- 11a — ON REAL SCREENS, OPTION A -->
-  <section class="slide">
-    <div class="wrap wide">
-      <div class="eyebrow"><span class="num">12</span> On real screens · Option A</div>
-      <h3>The outline secondary, in context.</h3>
-      <div class="screens-row">
-        <figure><img src="assets/optA-real-preview-finish.png" alt="Your book is ready screen, option A"><figcaption><strong>All three tiers</strong>Add to Cart · Edit My Book, Share · Regenerate</figcaption></figure>
-        <figure><img src="assets/optA-real-delivery.png" alt="Delivery info screen, option A"><figcaption><strong>Inline edits</strong>Add and Change become soft fills next to Continue</figcaption></figure>
-        <figure><img src="assets/optA-real-confirmation.png" alt="Order confirmation screen, option A"><figcaption><strong>Primary + secondary</strong>Back to home leads, Create account becomes an outline</figcaption></figure>
-        <figure><img src="assets/optA-real-cover.png" alt="Design your cover screen, option A"><figcaption><strong>Optional actions</strong>Regenerate and Add Photo become soft fills</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11 — ON REAL SCREENS -->
-  <section class="slide">
-    <div class="wrap wide">
-      <div class="eyebrow"><span class="num">12</span> On real screens · Option B</div>
-      <h3>The outline tertiary, in context.</h3>
-      <div class="screens-row">
-        <figure><img src="assets/real-preview-finish.png" alt="Your book is ready screen"><figcaption><strong>All three tiers</strong>Add to Cart · Edit My Book, Share · Regenerate</figcaption></figure>
-        <figure><img src="assets/real-delivery.png" alt="Delivery info screen"><figcaption><strong>Inline edits</strong>Add and Change stay quiet next to Continue</figcaption></figure>
-        <figure><img src="assets/real-confirmation.png" alt="Order confirmation screen"><figcaption><strong>Primary + secondary</strong>Back to home leads, Create account supports</figcaption></figure>
-        <figure><img src="assets/real-cover.png" alt="Design your cover screen"><figcaption><strong>Optional actions</strong>Regenerate and Add Photo never compete with Start My Book</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- 12 — CHALLENGES TO THE OUTLINE -->
+  <!-- 13 — QUESTIONS WE'VE HEARD -->
   <section class="slide">
     <div class="blob b3"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="num">13</span> Challenges to the outline</div>
+      <div class="eyebrow"><span class="num">13</span> Questions we've heard</div>
       <div class="cols c2" style="margin-top:1rem;align-items:start">
         <div>
-          <h3>What we've heard</h3>
-          <ul class="clean cross">
-            <li>It feels a bit <strong>cold</strong>.</li>
-            <li>It looks like a <strong>wireframe</strong>.</li>
-            <li>It has less <strong>warmth and personality</strong>.</li>
+          <h3>"The outline looks like a wireframe."</h3>
+          <ul class="clean">
+            <li>Users are <strong>used to outline buttons</strong>: 12 of 16 benchmarked systems use one.</li>
+            <li>In those systems, outlines <strong>rarely sit on non-white backgrounds</strong>.</li>
+            <li>Our users don't know what a wireframe is.</li>
           </ul>
         </div>
         <div class="card" style="border-color:var(--indigo-deep)">
           <h4>Buttons don't need to bring the warmth.</h4>
           <p>The problem started when we used pink and orange buttons to add warmth, and over time we've seen how much that didn't work.</p>
           <p style="margin-top:1rem">Buttons will be <strong>strong and functional</strong>. The warmth comes from <strong>colour, illustrations, background colours, photography and images</strong>, not from the buttons.</p>
-          <p style="margin-top:1rem">On "wireframe": our users don't know what a wireframe is, so we're <strong>not worried they'll see the product as one</strong>.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 13 — NEXT STEPS -->
+  <!-- 14 — NO UNDERLINE -->
+  <section class="slide">
+    <div class="blob b1"></div>
+    <div class="wrap">
+      <div class="eyebrow"><span class="num">14</span> Questions we've heard</div>
+      <h3>"Shouldn't text-only buttons be underlined?"</h3>
+      <ul class="clean">
+        <li>Underlines help accessibility, and we've noted that.</li>
+        <li>But an underline adds <strong>visual clutter</strong> and competes with the hierarchy.</li>
+        <li>Since iOS 7, users are used to <strong>text buttons without underlines</strong>.</li>
+      </ul>
+      <p class="kicker"><strong>Direction:</strong> no underline.</p>
+    </div>
+  </section>
+
+  <!-- 15 — EXCEPTIONS -->
   <section class="slide">
     <div class="blob b2"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="num">14</span> Next steps</div>
+      <div class="eyebrow"><span class="num">15</span> Exceptions</div>
+      <h3>The editor and special components have their own rules.</h3>
+      <div class="cols c3" style="margin-top:2rem">
+        <div class="card"><h4>Floating Regenerate</h4><p>It behaves like a toast, so it needs its own component, not a standard button.</p></div>
+        <div class="card"><h4>Crop and dense editors</h4><p>Too interaction-dense to fit the standard button rules.</p></div>
+        <div class="card"><h4>"Exception connue" board</h4><p>Tracks local components so we can decide later whether to add them to the system.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16 — ROLLOUT -->
+  <section class="slide">
+    <div class="blob b3"></div>
+    <div class="wrap">
+      <div class="eyebrow"><span class="num">16</span> What it costs</div>
+      <h3>Every designer will need to revisit their screens.</h3>
       <ul class="clean">
-        <li>Validate the outline tertiary together</li>
+        <li><strong>Progressively</strong>, with no urgency.</li>
+        <li>About <strong>30 to 60 minutes per designer per week</strong>, during design system hours.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 17 — NEXT STEPS -->
+  <section class="slide">
+    <div class="blob b2"></div>
+    <div class="wrap">
+      <div class="eyebrow"><span class="num">17</span> Next steps</div>
+      <ul class="clean">
+        <li>Validate the grey outline secondary and text-only tertiary together</li>
         <li>Build the variants in the library</li>
         <li>Share with the devs</li>
+        <li>Retrofit screens progressively during design system hours</li>
       </ul>
       <p class="kicker"><strong>Development timeline: unknown for now.</strong> We don't yet know who the new dev referents for the design system are, so we can't say when this will be built.</p>
     </div>
