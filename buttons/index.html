@@ -241,13 +241,10 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
 .ctx-demo{margin:0;display:flex;align-items:center;gap:clamp(14px,1.6vw,24px)}
 .ctx-demo .scrim{background:rgba(38,32,28,.55);border-radius:18px;padding:clamp(14px,1.6vw,22px) clamp(20px,2.4vw,36px);box-shadow:0 10px 30px -22px rgba(38,32,28,.35)}
 .ctx-demo .modal{width:clamp(220px,19vw,280px);background:#fff;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px;text-align:center}
-.ctx-demo .snip{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 10px 30px -22px rgba(38,32,28,.35)}
-.ctx-demo .regen{width:clamp(240px,20vw,290px);background:var(--dusk-900);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px}
 .ctx-demo .m-title{font-weight:700;font-size:15px;color:var(--ink)}
 .ctx-demo .m-body{font-size:12px;color:var(--ink-soft);line-height:1.4;margin-bottom:4px}
-.ctx-demo .regen .m-body{margin:2px 0 0}
 .ctx-demo .m-btn{display:flex;align-items:center;justify-content:center;height:38px;border-radius:38px;color:#fff;font-weight:500;font-size:14px}
-.ctx-demo .m-btn.sm{flex:none;height:30px;padding:0 14px;font-size:13px}
+.ctx-demo .crop{display:block;height:clamp(120px,15vh,150px);width:auto;border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 30px -22px rgba(38,32,28,.35)}
 .ctx-demo figcaption{font-size:var(--caption);color:var(--ink-soft);line-height:1.4;max-width:18ch}
 .ctx-demo figcaption strong{display:block;font-size:var(--body);margin-bottom:.15rem}
 .phones.compare figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:.6rem}
@@ -290,7 +287,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
         <div class="step"><div class="when">14 – 21 AUG</div><div class="what">Explore &amp; vote</div><div class="det">Team proposals reviewed in DS Office Hours. Unanimous vote to add a black neutral.</div></div>
         <div class="step"><div class="when">26 AUG</div><div class="what">Discover</div><div class="det">Black button screens reviewed with Benoit, then with Vincent.</div></div>
         <div class="step"><div class="when">24 SEP</div><div class="what">Challenge</div><div class="det">Black as secondary is challenged in the product design meeting. Black as tertiary is then ruled out too.</div></div>
-        <div class="step on pending"><div class="when">NOW</div><div class="what">Grey outline + text</div><div class="det">Black doesn't work as a secondary or as a tertiary, so despite the decision it isn't usable for us. Proposal: a grey outline secondary and a text-only tertiary.</div></div>
+        <div class="step on pending"><div class="when">NOW</div><div class="what">Find a solution</div><div class="det">One that always respects the rules, stays flexible and follows a clear logic.</div></div>
       </div>
     </div>
   </section>
@@ -303,7 +300,7 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
         <div class="step"><div class="when">14 – 21 AUG</div><div class="what">Explore &amp; vote</div><div class="det">Team proposals reviewed in DS Office Hours. Unanimous vote to add a black neutral.</div></div>
         <div class="step"><div class="when">26 AUG</div><div class="what">Discover</div><div class="det">Black button screens reviewed with Benoit, then with Vincent.</div></div>
         <div class="step"><div class="when">24 SEP</div><div class="what">Challenge</div><div class="det">Black as secondary is challenged in the product design meeting. Black as tertiary is then ruled out too.</div></div>
-        <div class="step on"><div class="when">NOW</div><div class="what">Grey outline + text</div><div class="det">Black doesn't work as a secondary or as a tertiary, so despite the decision it isn't usable for us. Proposal: a grey outline secondary and a text-only tertiary.</div></div>
+        <div class="step on"><div class="when">NOW</div><div class="what">Find a solution</div><div class="det">One that always respects the rules, stays flexible and follows a clear logic.</div></div>
       </div>
     </div>
   </section>
@@ -418,13 +415,8 @@ ul.pc li.con::before{content:"✕";color:var(--pink)}
           <span class="lad"><span class="btn-demo" style="background:#171717;border-color:#171717;color:#fff">Button Label</span><small>Tertiary · black</small></span>
         </div>
         <figure class="ctx-demo">
-          <div class="snip">
-            <div class="regen">
-              <div><p class="m-title">Want a different layout?</p><p class="m-body">You can regenerate as many times as you like.</p></div>
-              <span class="m-btn sm" style="background:#171717">Regenerate</span>
-            </div>
-          </div>
-          <figcaption><strong>On a small action</strong>Even this small, black is the loudest thing on the card.</figcaption>
+          <img class="crop" src="assets/black-refresh.png" alt="Black Refresh to see new photos pill over the photo selection grid">
+          <figcaption><strong>On a small action</strong>Even this small, black is the loudest thing on the screen.</figcaption>
         </figure>
       </div>
       <img class="shot screens" src="assets/screens-black-tertiary.png?v=2" alt="App screens with black tertiary buttons" />
